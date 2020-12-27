@@ -14,6 +14,10 @@ app.use(bodyParser.json())
 app.use('/user', userController)
 app.use('/task', taskController)
 
+app.get('/', (req, res) => {
+    res.status(200).send("Welcome to server !")
+})
+
 app.listen(3000, () => { console.log("serveur started") })
 
 
